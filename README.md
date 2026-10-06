@@ -25,28 +25,24 @@ It wrote the code, ran away, and now the game is unplayable.
 
 ## 📝 Document Your Experience
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+- [x] The game's purpose is to let the user guess a secret number and receive hints until they win.
+- [x] I found that the secret number changed whenever I clicked **Submit**, and the game’s "Higher/Lower" hints were incorrect.
+- [x] I fixed the game logic with help from AI by looking at the errors, asking for debugging guidance, and applying the suggested fixes. My experience was great because I learned how to debug with AI.
 
-## 📸 Demo Walkthrough
+## Demo Walkthrough
 
-Describe your fixed game in numbered steps so a reader can follow along without watching a video:
-
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
-
-**Screenshot** *(optional)*: <!-- Insert a screenshot of your fixed, winning game here -->
+1. User enters a guess of 40.
+2. The game returns **"Too Low"** and updates the score.
+3. User enters a guess of 70, and the game returns **"Too High"** while updating the score again.
+4. User enters the correct guess of 55, and the game confirms the win.
+5. The game ends after the correct guess, with the final score displayed.
 
 ## 🧪 Test Results
 
 ```
-# Paste your pytest output here, e.g.:
-# pytest tests/
-# ========================= X passed in 0.XXs =========================
+$ .venv/bin/python -m pytest -q tests/test_game_logic.py
+.......                                                                  [100%]
+7 passed in 0.65s
 ```
 
 ## 🚀 Stretch Features

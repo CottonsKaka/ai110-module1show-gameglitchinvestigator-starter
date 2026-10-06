@@ -31,7 +31,7 @@ I verified the repairs with the Streamlit `AppTest` harness by running `./.venv/
 
 ## 4. What did you learn about Streamlit and state?
 
-- How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+I learned that Streamlit reruns the script from top to bottom whenever a user interacts with a widget or clicks a button. Without session state, regular variables are recreated during each rerun, so values such as the secret number or attempt count can be reset unexpectedly. `st.session_state` stores values between reruns so the game can remember its progress. I would explain it as a small memory space for the app that keeps important values consistent while the script runs again.
 
 ---
 
@@ -39,5 +39,13 @@ I verified the repairs with the Streamlit `AppTest` harness by running `./.venv/
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+  
+  I want to reuse the habit of testing one behavior at a time and using the error messages to guide my debugging. I also want to give AI specific information about the problem instead of accepting a general solution without checking it. Writing focused tests helped me confirm that each fix worked and did not break another part of the game.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+  
+  Next time, I would first explain the intended behavior and constraints more clearly before asking AI to make changes. I would review the proposed code line by line and ask follow-up questions whenever I do not understand a change. I would also run tests after each important change so I can identify exactly which change caused a problem if something fails.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+  
+  This project taught me that AI-generated code is useful, but I still need to take control and make sure it matches what I actually want. I need to understand the code, why changes are needed, and verify the results instead of trusting AI automatically.
